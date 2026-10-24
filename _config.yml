@@ -1,0 +1,24 @@
+# Dependencies
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Soft Topology Lab
+tagline:          'Topology and Geometry in Soft Matter'
+description:      'Investigating the interplays between topology and geometry in Soft, Active, and Biological Matter'
+url:              
+baseurl:          ''
+
+author:
+  name:           'Cody Schimming'
+  url:            'https://schim111.github.io'
+
+paginate:         5
+
+# Custom vars
+version:          0.0.1
+
+github:
+  repo:           

@@ -1,0 +1,61 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+	<div class="post">
+		<h1 class="post-title" style="color: #00538B">
+			Welcome!
+		</h1>		
+		<p>
+			Our group uses computational modeling and mathematical theory to understand
+			the geometric and topological properties of soft, active, and biological 
+			materials. We are interested in how topological structures in ordered phases
+			form, interact, morph, may be manipulated, and alter macroscopic properties of
+			the material. We are also interested in how topology and geometry may be used 
+			to model and characterize active and biological systems out of equilibrium. We
+			are heavily motivated by experiments and try to make cross-disciplinary analogies
+			that benefit our understanding of the underlying physics. If you want to learn
+			a bit more about our current interests, see our <a href="/research/">Research</a> 
+			page, or feel free to <a href="/group/">reach out!</a>
+		</p>
+		
+		<p>
+			See recent news from the group below!
+		<p>
+	</div>
+</div>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>

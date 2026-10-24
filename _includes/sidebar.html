@@ -1,0 +1,74 @@
+<style>
+  #sidebar-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 1rem;       
+    margin-bottom: 1.5rem;
+  }
+  
+  .sidebar-random-img {
+    display: block;
+    width: 100%;
+    max-width: 18rem;       /* Caps the absolute width to match typical Hyde sidebar widths */
+    height: auto;
+    max-height: 180px;      /* Forces square constraints if the source file is square */
+    object-fit: contain;    /* 'contain' ensures the whole square photo scales down safely without cropping */
+    border-radius: 4px;     /* Optional styling for a cleaner look */
+  }
+</style>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+	  <div id="sidebar-image-container"></div>
+      <h1>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+
+      {% comment %}
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. See readme for usage.
+      {% endcomment %}
+
+      {% assign pages_list = site.pages | sort: "navorder" %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </nav>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+	const images = [
+	  {% assign image_files = site.static_files | where_exp: "item", "item.path contains 'public/images/research/'" %}
+	  {% for file in image_files %}
+	    "{{ file.path | uri_escape | relative_url }}"{% unless forloop.last %},{% endunless %}
+	  {% endfor %}
+	]
+	
+	if (images.length > 0) {
+	  const randomIndex = Math.floor(Math.random() * images.length);
+	  const container = document.getElementById("sidebar-image-container");
+	  if (container) {
+	    container.innerHTML = `<img src="${images[randomIndex]}" alt="Sidebar Image" class="sidebar-random-img" />`;
+	  }
+	}
+  });		  
+</script>
