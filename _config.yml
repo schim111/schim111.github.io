@@ -9,7 +9,7 @@ title:            Soft Topology Lab
 tagline:          'Topology and Geometry in Soft Matter'
 description:      'Investigating the interplays between topology and geometry in Soft, Active, and Biological Matter'
 url:              
-baseurl:          ''
+baseurl:          '/schim111.github.io'
 
 author:
   name:           'Cody Schimming'
