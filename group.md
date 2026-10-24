@@ -5,7 +5,7 @@ navorder: 1
 ---
 
 ## Principal Investigator
-![Cody Schimming]({{ '/public/images/people/Cody_Schimming.jpg' | relative_url }})
+<img src="/public/images/people/Cody_Schimming.jpg" alt="Cody Schimming">
 ### Cody Schimming
 Assistant Professor  
 Department of Physics  
