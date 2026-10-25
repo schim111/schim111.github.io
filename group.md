@@ -11,4 +11,6 @@ Assistant Professor
 Department of Physics  
 University of Massachusetts Boston  
 **Email:** cody.schimming@umb.edu  
-**Office:** ISC 4120
+**Office:** ISC 4120  
+
+If you're interested in joining the group, feel free to send me an email!

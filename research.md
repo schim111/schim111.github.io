@@ -121,8 +121,8 @@ Click on a topic to see a brief summary of the current research interests of the
 			The modeling of cellular tissues presents a unique challenge to physicists.
 			On one hand, they are incredibly biologically complex with indescribable amounts
 			of biochemical processes. On the other hand, at the macroscopic level, they exhibit
-			broken symmetries and emergent phenomena, similar to soft and active matter systems
-			which have been well-studied. We are interested in using our understanding of 
+			broken symmetries and emergent phenomena, similar to soft and active matter systems. 
+			We are interested in using our understanding of 
 			soft and active matter to develop as-simple-as-possible models for cellular tissues.
 		</p>
 		<h3>Cellular Tissues as Active Materials</h3>
@@ -146,6 +146,6 @@ Click on a topic to see a brief summary of the current research interests of the
 				<source src="/public/videos/ChevronDensity.mp4" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
-			<figcaption>Clusters of an isotropic active material are guided by an anisotropic zig-zaging strip.</figcaption>
+			<figcaption>Clusters of an isotropic active fluid are guided by a zig-zaging strip of anisotropic friction.</figcaption>
 		</figure>
 </details>
